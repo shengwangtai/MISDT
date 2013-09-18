@@ -3,20 +3,20 @@ package org.eclipsercp.integration.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Interface implements ITree {
+public class Interface implements ITree<Operation> {
 	private Long id;
 	private String name;
-	private  List children = new ArrayList();
+	private  List<Operation> children = new ArrayList<Operation>();
 	public Interface(){
 	}	
 	public Interface(String name){
 		this.name = name;
 	}
 	
-	public void setId(){
+	public void setId(Long id){
 		this.id = id;
 	}	
-	public Long getId(Long id){
+	public Long getId(){
 		return id;
 	}
 	
@@ -32,12 +32,12 @@ public class Interface implements ITree {
 	}
 
 	@Override
-	public void setChildren(List Children) {
+	public void setChildren(List<Operation> children) {
 		// TODO Auto-generated method stub
         this.children = children;
 	}
 	@Override
-	public List getChildren() {
+	public List<Operation> getChildren() {
 		// TODO Auto-generated method stub
 		return children;
 	}

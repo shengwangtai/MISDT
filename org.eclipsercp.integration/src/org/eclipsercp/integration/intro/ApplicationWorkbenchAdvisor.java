@@ -18,6 +18,7 @@ public class ApplicationWorkbenchAdvisor extends WorkbenchAdvisor {
     public void initialize(IWorkbenchConfigurer configurer) {
         super.initialize(configurer);
         configurer.setSaveAndRestore(true);
+        PlatformUI.getPreferenceStore().setDefault(IWorkbenchPreferenceConstants.ENABLE_ANIMATIONS, true);
         PlatformUI.getPreferenceStore().setValue(IWorkbenchPreferenceConstants.SHOW_TRADITIONAL_STYLE_TABS,false);
     }
 

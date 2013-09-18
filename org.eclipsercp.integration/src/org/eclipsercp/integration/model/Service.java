@@ -3,10 +3,10 @@ package org.eclipsercp.integration.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Service implements ITree {
+public class Service implements ITree<Interface> {
 	private Long id;
 	private String name;
-	private  List children = new ArrayList();
+	private  List<Interface> children = new ArrayList<Interface>();
 	
     public Service(){    	
     }
@@ -28,13 +28,13 @@ public class Service implements ITree {
 	}
 
 	@Override
-	public void setChildren(List children) {
+	public void setChildren(List<Interface> children) {
 		// TODO Auto-generated method stub
     this.children = children;
 	}
 
 	@Override
-	public List getChildren() {
+	public List<Interface> getChildren() {
 		// TODO Auto-generated method stub
 		return children;
 	}

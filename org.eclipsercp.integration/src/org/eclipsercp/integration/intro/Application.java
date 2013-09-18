@@ -2,6 +2,7 @@ package org.eclipsercp.integration.intro;
 
 import org.eclipse.equinox.app.IApplication;
 import org.eclipse.equinox.app.IApplicationContext;
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.PlatformUI;
@@ -10,7 +11,7 @@ import org.eclipse.ui.PlatformUI;
  * This class controls all aspects of the application's execution
  */
 public class Application implements IApplication {
-
+	public static final String ID = "org.eclipsercp.integration";
 	/* (non-Javadoc)
 	 * @see org.eclipse.equinox.app.IApplication#start(org.eclipse.equinox.app.IApplicationContext)
 	 */

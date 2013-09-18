@@ -5,6 +5,7 @@ import java.util.List;
 public class Message implements ITree {
 	private Long id;
 	private String name;
+	private boolean isInMsg;
 	
 	public Message(){
 	}
@@ -12,10 +13,17 @@ public class Message implements ITree {
 		this.name = name;
 	}
 
-	public void setId(){
+	public void setIsInMsg(boolean isInMsg){
+		this.isInMsg = isInMsg;
+	}
+	public boolean getIsInMsg(){
+		return isInMsg;
+	}
+	
+	public void setId(Long id){
 		this.id = id;
 	}	
-	public Long getId(Long id){
+	public Long getId(){
 		return id;
 	}
 	

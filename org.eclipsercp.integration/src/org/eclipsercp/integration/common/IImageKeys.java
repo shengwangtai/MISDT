@@ -1,12 +1,11 @@
 package org.eclipsercp.integration.common;
 
 public interface IImageKeys {
-	public static final String ONLINE = "icons/online.png";
-	public static final String OFFLINE = "icons/offline.png";
-	public static final String AWAY = "icons/away.png";
-	public static final String BUSY = "icons/busy.png";
-	public static final String GROUP = "icons/group.png";
-	public static final String ADD_CONTACT = "icons/addContact.png";
-	public static final String CHAT = "icons/chat.png";	
-	public static final String TASK = "icons/task.png";	
+	public static final String TASK = "icons/task.png";
+	//interface treeViewer icon
+	public static final String SERVICE = "icons/interfaceTree/Web_Service.gif";
+	public static final String INTERFACE = "icons/interfaceTree/SEI.gif";
+	public static final String OPERATION = "icons/interfaceTree/Web_Method.gif";
+	public static final String INMSG = "icons/interfaceTree/Web_Param_In.gif";
+	public static final String OUTMSG = "icons/interfaceTree/Web_Param_Out.gif";
 }

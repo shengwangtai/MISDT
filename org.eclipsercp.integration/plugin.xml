@@ -72,6 +72,7 @@
       </view>
       <view
             class="org.eclipsercp.integration.view.InterfaceTreeView"
+            icon="icons/interfaceTree/Web_Service_Group.gif"
             id="org.eclipsercp.integration.view.InterfaceTreeView"
             name="InterfaceTreeView">
       </view>
@@ -102,6 +103,40 @@
               id="org.eclipsercp.integration.editor.SystemInterfaceEditor"
               name="SystemInterfaceEditor">
         </editor>
+     </extension>
+     <extension
+           point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+        <propertyContributor
+              contributorId="org.eclipsercp.integration.view.InterfaceTreeView">
+           <propertyCategory
+              category="propertyContributor">              
+           </propertyCategory>
+        </propertyContributor>
+     </extension>
+     <extension
+           point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+        <propertyTabs
+              contributorId="org.eclipsercp.integration.view.InterfaceTreeView">
+           <propertyTab
+                 category="propertyContributor"
+                 id="org.eclipsercp.integration.propertyTab"
+                 label="General">
+           </propertyTab>
+        </propertyTabs>
+     </extension>
+     <extension
+           point="org.eclipse.ui.views.properties.tabbed.propertySections">
+        <propertySections
+              contributorId="org.eclipsercp.integration.view.InterfaceTreeView">
+           <propertySection
+                 class="org.eclipsercp.integration.tabpropertyview.AbstractPropertySection1"
+                 id="org.eclipsercp.integration.propertySection1"
+                 tab="org.eclipsercp.integration.propertyTab">
+               <input  
+                     type="org.eclipsercp.integration.view.InterfaceTreeView">
+               </input>
+           </propertySection>
+        </propertySections>
      </extension>
   
 </plugin>
