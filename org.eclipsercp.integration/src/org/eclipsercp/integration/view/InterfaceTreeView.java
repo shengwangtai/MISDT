@@ -33,6 +33,8 @@ import org.eclipse.swt.widgets.Tree;
 import org.eclipse.wb.swt.SWTResourceManager;
 
 public class InterfaceTreeView extends ViewPart implements ITabbedPropertySheetPageContributor{
+	//public class InterfaceTreeView extends ViewPart{	
+	private TreeViewer treeViewer;
 	private static class Sorter extends ViewerSorter {
 		public int compare(Viewer viewer, Object e1, Object e2) {
 			Object item1 = e1;
@@ -128,7 +130,7 @@ public class InterfaceTreeView extends ViewPart implements ITabbedPropertySheetP
 	@Override
 	public void createPartControl(Composite parent) {
 		
-		TreeViewer treeViewer = new TreeViewer(parent, SWT.BORDER);
+		treeViewer = new TreeViewer(parent, SWT.BORDER);
 		Tree tree = treeViewer.getTree();
 		tree.setFont(SWTResourceManager.getFont("Î¢ÈíÑÅºÚ", 10, SWT.NORMAL));
 		//ContainerCheckedTreeViewer treeViewer = new ContainerCheckedTreeViewer(parent,SWT.BORDER|SWT.H_SCROLL);
@@ -136,8 +138,8 @@ public class InterfaceTreeView extends ViewPart implements ITabbedPropertySheetP
 		//Tree tree = treeViewer.getTree();
 		treeViewer.setLabelProvider(new ViewerLabelProvider());
 		treeViewer.setContentProvider(new TreeContentProvider());
-        treeViewer.setInput(TreeFactory.createTree());
         getSite().setSelectionProvider(treeViewer);
+        treeViewer.setInput(TreeFactory.createTree());
 		createActions();
 		initializeToolBar();
 		initializeMenu();
@@ -169,6 +171,7 @@ public class InterfaceTreeView extends ViewPart implements ITabbedPropertySheetP
 	@Override
 	public void setFocus() {
 		// Set the focus
+		treeViewer.getControl().setFocus();
 	}
 
 	@Override

@@ -77,10 +77,9 @@
             name="InterfaceTreeView">
       </view>
    </extension>
-   
-     <extension
+   <extension
     point="org.eclipse.ui.activities">
- <activity
+    <activity
        id="someid.remove"
        name="RemoveSearchMenu">
     <enabledWhen>
@@ -138,5 +137,14 @@
            </propertySection>
         </propertySections>
      </extension>
-  
+     <extension
+         point="org.eclipse.core.runtime.adapters">
+       <factory
+            adaptableType="org.eclipsercp.integration.model.Service"
+            class="org.eclipsercp.integration.adapter.ServicePropertiesSourceAdapterFactory">
+         <adapter
+               type="org.eclipse.ui.views.properties.IPropertySource">
+         </adapter>
+      </factory>
+     </extension> 
 </plugin>
